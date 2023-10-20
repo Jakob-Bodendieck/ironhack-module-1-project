@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Survivor</title>
+    <link rel="stylesheet" href="./Styles/style.css"/> 
+</head>
+<body>
+    <main>
+        <!-- Start Screen-->
+        <div id= 'game-intro'>
+            <img src="./images/image.png" alt="game-image">
+            <button id= "start-button">Start Coding</button>
+            <p>Use the arrow keys to tame the WebDev student</p>
+            <img src="" alt="arrow image">
+        </div>
+
+        <!-- Game Screen (initially hidden) -->
+        <div id="game-container">
+            <div>
+              <h2>Stats</h2>
+              <p>Score: <span id="score">0</span></p>
+              <p>Lives: <span id="lives">3</span></p>
+            </div>
+        <div id = 'game-screen'>
+        </div>
+    </div>
+
+
+        <!-- Enmd Screen -->
+        <div id='game-end'>
+            <img src="" alt="end-image">
+            <h1></h1>
+            <br />
+            <button id ='restart-button'>Restart</button>
+        </div>
+    </main>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="js/obstacle.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
