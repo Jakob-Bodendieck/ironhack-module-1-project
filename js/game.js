@@ -69,10 +69,10 @@ class Game {
         }
         if(!this.obstacles.length && !this.loadingObstacle){ //not sure about this. check once we create obstacles and animations. 
             this.loadingObstacle = true;
-            setTimeout(()=>{
+            setInterval(()=>{
                 this.obstacles.push(new Obstacle(this.gameScreen))
                 this.loadingObstacle = false
-            }, 500)
+            }, (Math.random()*1500))
         }
     }
 

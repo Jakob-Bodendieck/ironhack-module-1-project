@@ -10,8 +10,8 @@ class Player {
         this.directionY = 0;
         this.maxJumpHeight = 0;
         this.element = document.createElement("img");
-        this.isGrounded = true;
-
+        this.isJumping = false;
+        this.isFalling = false;
 
         this.element.src = imgSrc;
         this.element.style.position = "absolute";
@@ -40,6 +40,10 @@ class Player {
         //Bottom
         if(this.top + this.height >= this.gameScreen.offsetHeight){
             this.top = this.gameScreen.offsetHeight - this.height;
+            if(this.isJumping && this.isFalling){
+            this.isJumping = false; 
+            this.isFalling = false;
+            }
         }
         //Top
         else if (this.top <= 0){
@@ -50,8 +54,10 @@ class Player {
 
 
     jump(){
-        if (this.top >= 500 && this.isGrounded){
-            this.isGrounded = false; 
+        console.log(this.top);
+        if (this.top >= 450 && !this.isJumping){
+           this.isJumping = true;
+           console.log("test");
         } 
     }
 
@@ -74,16 +80,14 @@ class Player {
             this.isGrounded = true;
         } */
 
-        if(!this.isGrounded){
-            this.top -=5
+        if(this.top > 200 && this.isJumping && !this.isFalling){
+            this.top -= 10
         }
-        else if(this.top <= 300){
-            this.top += 5
+        else if(this.top <= 200 && this.isJumping){
+            this.top += 15
+            this.isFalling = true;
         }
-        else if(this.top <= 100){
-            this.top = 100
-            this.isGrounded = true
-        }
+        
     }
 
     didCollide(obstacle){
