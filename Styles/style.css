@@ -47,13 +47,14 @@ body {
     100% {
       background-position: 0 50px;
     } */
-/* 
-/*     @keyframes slide {
+
+/* @keyframes slide {
       0% {
-        transform: translate(0 0);
+        transform: translate(0);
       }
       100% {
-        transform: translate(-1920px 0); /* The image width */
+        transform: translate(-1920px);
+       }}  */
 
   #game-end {
     display: none;

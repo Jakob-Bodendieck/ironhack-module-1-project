@@ -12,13 +12,13 @@ class Coffee {
         //position
 
         this.left = 1600
-        this.top = 560;
+        this.top = 300;
         //dimensions
         this.width = 75;
         this.height = 75;
 
         this.element = document.createElement("img");
-        this.element.src = "./images/coffee2.png";
+        this.element.src = "./images/coffee.jpeg";
         this.element.style.position = "absolute";
         this.element.style.width = `${this.width}px`;
         this.element.style.height = `${this.height}px`;

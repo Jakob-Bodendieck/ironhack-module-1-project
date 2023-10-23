@@ -87,15 +87,15 @@ window.onload = function (){
                         break;
 
                         case "ArrowUp":
-                        game.player.directionY = +3; //change this later to make the player jump
+                        game.player.directionY = +5; //change this later to make the player jump
                         break; 
 
                         case "ArrowRight":
                         game.player.directionX = 0;
                         break;
                         
-                        case "ArrowDown": 
-                        game.player.directionY = 0; //change this later when we define the jumping function 
+/*                      case "ArrowDown": 
+                        game.player.directionY = 0; //change this later when we define the jumping function  */
 
                 }
             }

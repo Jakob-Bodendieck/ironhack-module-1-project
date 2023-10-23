@@ -8,10 +8,12 @@ class Game {
         this.height = 600;
         this.width = 1600; //look into how we can create percentage ratio. 
         this.obstacles = [];
+        this.coffees = [];
         this.score = 0; 
         this.lives = 3;
         this.gameOver = false;
         this.loadingObstacle = false;
+        this.loadingCoffee = false;
 
     }
 
@@ -36,14 +38,30 @@ class Game {
         this.update()
         window.requestAnimationFrame(()=> this.gameLoop())
     }
+/* 
+    scoreIncrease(){
+        setInterval(()=>{
+            this.score+=10
+        },1000/60) */
+/*     } */
+/* scoreIncrease(){
+    setInterval(()=> {
+        this.score += 1;
+    },2000)
+} */
 
     update (){
-        let score = document.getElementById("score");
+        /* let score = document.getElementById("score");
         let lives = document.getElementById("lives");
 
         score.innerHTML = this.score //what does inner HTML do here? 
         lives.innerHTML = this.lives
 
+ */
+/*         let timer = 0;
+ */
+/*         this.scoreIncrease()
+ */
         this.player.move();
 
         for (let i = 0; i<this.obstacles.length; i++){
@@ -67,14 +85,62 @@ class Game {
         if (this.lives === 0){
             this.endGame();
         }
+
+        let score = document.getElementById("score");
+        let lives = document.getElementById("lives");
+
+        score.innerHTML = Math.floor(this.score += 1/60) //what does inner HTML do here? 
+        lives.innerHTML = this.lives
+
         if(!this.obstacles.length && !this.loadingObstacle){ //not sure about this. check once we create obstacles and animations. 
             this.loadingObstacle = true;
             setInterval(()=>{
                 this.obstacles.push(new Obstacle(this.gameScreen))
                 this.loadingObstacle = false
-            }, (Math.random()*1500))
+            }, (2000))
         }
-    }
+
+        //COFFEE
+
+        /*         let score = document.getElementById("score");
+        let lives = document.getElementById("lives");
+
+        score.innerHTML = this.score //what does inner HTML do here? 
+        lives.innerHTML = this.lives */
+/* 
+        this.player.move(); */
+
+        for (let i = 0; i<this.coffees.length; i++){
+            const coffee = this.coffees[i];
+            coffee.move();
+
+            //Check for collision
+            if (this.player.didCollide(coffee)){
+                coffee.element.remove();
+                this.coffees.splice(i,1); //what does the splice do here? 
+                this.score +=5;
+            }
+
+/*             else if (coffee.right > this.width){ //not completely understnading this
+                this.score++;
+                coffee.element.remove();
+                this.coffees.splice(i,1);
+            } */
+        }
+
+/*         if (this.lives === 0){
+            this.endGame();
+        } */
+        if(!this.coffees.length && !this.loadingCoffee){ //not sure about this. check once we create obstacles and animations. 
+            this.loadingCoffee = true;
+            setInterval(()=>{
+                this.coffees.push(new Coffee(this.gameScreen))
+                this.loadingCoffee = false
+            }, (1500))
+        }
+
+/*         this.scoreIncrease()
+ */    }
 
     endGame(){
         this.gameOver = true;

@@ -81,10 +81,10 @@ class Player {
         } */
 
         if(this.top > 200 && this.isJumping && !this.isFalling){
-            this.top -= 10
+            this.top -= 20
         }
         else if(this.top <= 200 && this.isJumping){
-            this.top += 15
+            this.top += 20
             this.isFalling = true;
         }
         
@@ -98,6 +98,20 @@ class Player {
             && playerRect.right > obstacleRect.left
             && playerRect.top < obstacleRect.bottom
             && playerRect.bottom > obstacleRect.top) {
+                return true;
+            } else {
+                return false; 
+            }
+    }
+
+    didCollide(coffee){
+        const playerRect = this.element.getBoundingClientRect()
+        const coffeeRect = coffee.element.getBoundingClientRect()
+
+        if (playerRect.left < coffeeRect.right
+            && playerRect.right > coffeeRect.left
+            && playerRect.top < coffeeRect.bottom
+            && playerRect.bottom > coffeeRect.top) {
                 return true;
             } else {
                 return false; 
