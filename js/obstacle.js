@@ -11,8 +11,8 @@ class Obstacle {
 
         //position
 
-        this.left = this.gameScreen.offsetWidth -this.width
-        this.top = this.gameScreen.offsetHeight - this.height
+        this.left = 1600
+        this.top = 535;
         //dimensions
         this.width = 100;
         this.height = 100;

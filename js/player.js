@@ -8,7 +8,10 @@ class Player {
         this.imgSrc = imgSrc;
         this.directionX = 0;
         this.directionY = 0;
+        this.maxJumpHeight = 0;
         this.element = document.createElement("img");
+        this.isGrounded = true;
+
 
         this.element.src = imgSrc;
         this.element.style.position = "absolute";
@@ -45,10 +48,42 @@ class Player {
         this.updatePosition()
     }
 
+
+    jump(){
+        if (this.top >= 500 && this.isGrounded){
+            this.isGrounded = false; 
+        } 
+    }
+
     updatePosition() {
         //Update CSS
+/*         if(this.directionY < this.maxJumpHeight){
+            this.maxJumpHeight = this.directionY;
+        } */
         this.element.style.left = `${this.left}px`;
         this.element.style.top = `${this.top}px`;
+
+/*         if(!this.isGrounded){
+            this.top += 5;
+        }
+        else if(this.top <= 50){
+            this.top += 5;
+        }
+        else if(this.top >= 100){
+            this.top = 100;
+            this.isGrounded = true;
+        } */
+
+        if(!this.isGrounded){
+            this.top -=5
+        }
+        else if(this.top <= 300){
+            this.top += 5
+        }
+        else if(this.top <= 100){
+            this.top = 100
+            this.isGrounded = true
+        }
     }
 
     didCollide(obstacle){

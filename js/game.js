@@ -4,8 +4,8 @@ class Game {
         this.startScreen = document.getElementById('game-intro');
         this.gameScreen = document.getElementById('game-screen');
         this.gameEndScreen = document.getElementById('game-end');
-        this.player = new Player (this.gameScreen, 200, 500, 100, 150, "./images/player.png")//change image
-        this.height = 1000;
+        this.player = new Player (this.gameScreen, 200, 485, 100, 150, "./images/player.png")//change image
+        this.height = 600;
         this.width = 1600; //look into how we can create percentage ratio. 
         this.obstacles = [];
         this.score = 0; 

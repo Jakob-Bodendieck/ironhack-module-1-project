@@ -40,21 +40,27 @@ window.onload = function (){
 
             //Implement the jump here
             if (game){
+
+
                 switch(key){
                     case "ArrowLeft":
                         game.player.directionX = -3; //still need to define player
                         break;
-
+/* 
                         case "ArrowUp":
                         game.player.directionY = -3; //change this later to make the player jump -> work this out with an interval
-                        break;
+                        break; */
+
+                        case "ArrowUp":
+                            game.player.jump()
+                            break;
 
                         case "ArrowRight":
                         game.player.directionX = 3;
                         break;
                         
-                        case "ArrowDown": 
-                        game.player.directionY = 3; //change this later when we define the jumping function 
+/*                         case "ArrowDown": 
+                        game.player.directionY = 3; //change this later when we define the jumping function  */
 
                 }
             }
@@ -81,8 +87,8 @@ window.onload = function (){
                         break;
 
                         case "ArrowUp":
-                        game.player.directionY = 0; //change this later to make the player jump
-                        break;
+                        game.player.directionY = +3; //change this later to make the player jump
+                        break; 
 
                         case "ArrowRight":
                         game.player.directionX = 0;
