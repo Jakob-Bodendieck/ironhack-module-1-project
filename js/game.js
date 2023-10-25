@@ -14,6 +14,7 @@ class Game {
         this.coffees = [];
         this.score = 0; 
         this.lives = 3;
+        this.test = 0; // It´s HHHHHHHHHHHHHEEEEEEEEEEEEEERRRRRRRRRRRRRRREEEEEEEEEEEEEEEEE
         this.gameOver = false;
         this.loadingObstacle = false;
         this.loadingCoffee = false;
