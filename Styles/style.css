@@ -8,7 +8,7 @@ body {
   }
   
   #game-intro {
-    padding: 20px 0px;
+    padding: 5px 0px;
     background-image: url(../images/wallpaper.jpeg);
     background-position: center;
     background-size: cover;
@@ -50,8 +50,9 @@ body {
     align-items: center;
     position: relative;
     background-image: url(../images/background.jpg);
-    background-size: auto;
-    animation: slide 10s linear infinite;
+    background-position: center;
+    background-size: cover;
+    height: auto;
   }
   
   #game-screen {

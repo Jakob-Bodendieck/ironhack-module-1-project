@@ -3,6 +3,7 @@ class Game {
     constructor(){
         this.startScreen = document.getElementById('game-intro');
         this.gameScreen = document.getElementById('game-screen');
+        this.gameImage = document.getElementById('game-container');
         this.gameEndScreen = document.getElementById('game-end');
         this.gameEndScreenJob = document.getElementById('game-end-job');
         this.stats = document.getElementById('stats')
@@ -41,6 +42,7 @@ class Game {
 
         //Show the Game  Screen
         this.gameScreen.style.display = "block";
+        this.gameImage.style.height = '800px'
         this.stats.style.display = "flex";
 
         //Start Game
@@ -171,6 +173,7 @@ class Game {
     endGame(){
         this.gameOver = true;
         this.myMusic.pause()
+        this.gameImage.style.height = 'auto'
         this.player.element.remove(); //why not just type player.remove(). Why add .element? 
         this.obstacles.forEach(obstacle =>{
             obstacle.element.remove();
