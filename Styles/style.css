@@ -110,10 +110,19 @@ body {
 
   #game-end {
     display: none;
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+
   }
 
   #game-end-job{
     display: none;
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
 
   }
 
