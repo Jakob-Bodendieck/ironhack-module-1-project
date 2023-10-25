@@ -35,7 +35,10 @@ class Obstacle {
         }
 
         move(){
-            this.left -= 5; //updated it to move from the right to left
+            let speed = setInterval(()=>{
+                speed+=0.0001
+            },2000)
+            this.left -= 4 + speed/3000; //updated it to move from the right to left
             this.updatePosition();
         }
     }

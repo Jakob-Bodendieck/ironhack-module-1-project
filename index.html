@@ -10,15 +10,16 @@
     <main>
         <!-- Start Screen-->
         <div id= 'game-intro'>
-            <img src="./images/image.png" alt="game-image">
+<!--             <img id = "intro-image" src="./images/intro screen.png" alt="game-image">
+ -->     <h1>Defeat the Code!</h1>
+            <p id="intro text">Use the arrow keys to tame the WebDev student. <br/> Avoid bugs and catch coffee to stay alive and earn points.
+                The more points you earn, the higher your reward! </p>
             <button id= "start-button">Start Coding</button>
-            <p>Use the arrow keys to tame the WebDev student</p>
-            <img src="" alt="arrow image">
         </div>
 
         <!-- Game Screen (initially hidden) -->
         <div id="game-container">
-            <div>
+            <div id="stats">
               <h2>Stats</h2>
               <p>Score: <span id="score">0</span></p>
               <p>Lives: <span id="lives">3</span></p>
@@ -32,10 +33,17 @@
 
         <!-- Enmd Screen -->
         <div id='game-end'>
-            <img src="" alt="end-image">
-            <h1></h1>
+            <img src="./images/angrywebdev.png" alt="end-image">
+            <h1>Get a ticket!</h1>
             <br />
             <button id ='restart-button'>Restart</button>
+        </div>
+
+        <div id='game-end-job'>
+            <img src="./images/happywebdev.png" alt="end-image2">
+            <h1>You found a job!</h1>
+            <br />
+            <button id ='restart-button-job-offer'>Restart</button>
         </div>
     </main>
 

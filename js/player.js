@@ -57,7 +57,6 @@ class Player {
         console.log(this.top);
         if (this.top >= 450 && !this.isJumping){
            this.isJumping = true;
-           console.log("test");
         } 
     }
 

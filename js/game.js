@@ -4,9 +4,11 @@ class Game {
         this.startScreen = document.getElementById('game-intro');
         this.gameScreen = document.getElementById('game-screen');
         this.gameEndScreen = document.getElementById('game-end');
-        this.player = new Player (this.gameScreen, 200, 485, 100, 150, "./images/player.png")//change image
+        this.gameEndScreenJob = document.getElementById('game-end-job');
+        this.stats = document.getElementById('stats')
+        this.player = new Player (this.gameScreen, 200, 485, 100, 150, "./images/walking gif.gif")//change image
         this.height = 600;
-        this.width = 1600; //look into how we can create percentage ratio. 
+        this.width = 1450; //look into how we can create percentage ratio. 
         this.obstacles = [];
         this.coffees = [];
         this.score = 0; 
@@ -14,18 +16,32 @@ class Game {
         this.gameOver = false;
         this.loadingObstacle = false;
         this.loadingCoffee = false;
+        this.myMusic =  new Audio('../Sounds/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3')
+        this.winningMusic = new Audio ('../Sounds/winning music.mp3')
+        this.sadMusic = new Audio ('../Sounds/sad-music.mp3')
+        this.coffeeSound = new Audio ('../Sounds/coffeeSound.wav')
+        this.bugSound = new Audio ('../Sounds/bugSound.wav')
 
     }
+
+    
+
+/*     player = document.createElement("img");
+    player.setAttribute("id","player") */
 
     start(){
         this.gameScreen.style.height = `${this.height}px`; //we might want to change dimensions (maybe %) 
         this.gameScreen.style.width = `${this.width}px`;
+        this.myMusic.play()
+
 
         //Hide Game Intro Screen
         this.startScreen.style.display = "none";
 
+
         //Show the Game  Screen
         this.gameScreen.style.display = "block";
+        this.stats.style.display = "block";
 
         //Start Game
         this.gameLoop()
@@ -71,12 +87,12 @@ class Game {
             //Check for collision
             if (this.player.didCollide(obstacle)){
                 obstacle.element.remove();
+                this.bugSound.play()
                 this.obstacles.splice(i,1); //what does the splice do here? 
                 this.lives --;
             }
 
             else if (obstacle.right > this.width){ //not completely understnading this
-                this.score ++;
                 obstacle.element.remove();
                 this.obstacles.splice(i,1);
             }
@@ -92,12 +108,17 @@ class Game {
         score.innerHTML = Math.floor(this.score += 1/60) //what does inner HTML do here? 
         lives.innerHTML = this.lives
 
+/*         let frequency = 2200;
+ */
+
         if(!this.obstacles.length && !this.loadingObstacle){ //not sure about this. check once we create obstacles and animations. 
             this.loadingObstacle = true;
             setInterval(()=>{
                 this.obstacles.push(new Obstacle(this.gameScreen))
                 this.loadingObstacle = false
-            }, (2000))
+                /* frequency -=200 */
+            }, 1300)
+
         }
 
         //COFFEE
@@ -116,6 +137,8 @@ class Game {
 
             //Check for collision
             if (this.player.didCollide(coffee)){
+                console.log("test");
+                this.coffeeSound.play()
                 coffee.element.remove();
                 this.coffees.splice(i,1); //what does the splice do here? 
                 this.score +=5;
@@ -133,10 +156,13 @@ class Game {
         } */
         if(!this.coffees.length && !this.loadingCoffee){ //not sure about this. check once we create obstacles and animations. 
             this.loadingCoffee = true;
+            let frequency = 2000;
             setInterval(()=>{
                 this.coffees.push(new Coffee(this.gameScreen))
                 this.loadingCoffee = false
-            }, (1500))
+                frequency -= 50
+                console.log(frequency)
+            },frequency)
         }
 
 /*         this.scoreIncrease()
@@ -144,13 +170,25 @@ class Game {
 
     endGame(){
         this.gameOver = true;
+        this.myMusic.pause()
         this.player.element.remove(); //why not just type player.remove(). Why add .element? 
         this.obstacles.forEach(obstacle =>{
             obstacle.element.remove();
         });
 
-        this.gameScreen.style.display = "none"
-        this.gameEndScreen.style.display = "block"
+
+        if (this.score < 100){
+            this.gameScreen.style.display = "none"
+            this.gameEndScreen.style.display = "block"
+            this.sadMusic.play()
+        }
+
+        else if (this.score >= 100){
+            this.gameScreen.style.display = "none"
+            this.gameEndScreenJob.style.display = "block"
+            this.winningMusic.play()
+
+        }
     }
 
 }

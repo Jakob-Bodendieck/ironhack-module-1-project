@@ -1,6 +1,7 @@
 window.onload = function (){
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
+    const restartButtonJob = document.getElementById ("restart-button-job-offer");
 
 
     let game;
@@ -12,10 +13,13 @@ window.onload = function (){
     })
 
     function startGame (){ //empty for now
-
     }
 
     restartButton.addEventListener("click", function(){
+        restartGame();
+    })
+
+    restartButtonJob.addEventListener("click", function(){
         restartGame();
     })
 

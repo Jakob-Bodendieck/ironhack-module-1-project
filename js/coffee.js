@@ -18,7 +18,7 @@ class Coffee {
         this.height = 75;
 
         this.element = document.createElement("img");
-        this.element.src = "./images/coffee.jpeg";
+        this.element.src = "./images/coffee-removebg.png";
         this.element.style.position = "absolute";
         this.element.style.width = `${this.width}px`;
         this.element.style.height = `${this.height}px`;
@@ -35,7 +35,10 @@ class Coffee {
         }
 
         move(){
-            this.left -= 5; //updated it to move from the right to left
+            let speed = setInterval(()=>{
+                speed+=0.0001
+            },2000)
+            this.left -= 4 + speed/2500; //updated it to move from the right to left
             this.updatePosition();
         }
     }
