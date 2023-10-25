@@ -82,10 +82,10 @@ class Player {
         } */
 
         if(this.top > 200 && this.isJumping && !this.isFalling){
-            this.directionY = -20;
+            this.directionY = -10;
         }
         else if(this.top < 200 && this.isJumping && !this.isFalling){
-            this.directionY = 20;
+            this.directionY = 10;
             this.isFalling = true;
         }
         
