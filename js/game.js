@@ -56,31 +56,11 @@ class Game {
         this.update()
         window.requestAnimationFrame(()=> this.gameLoop())
     }
-/* 
-    scoreIncrease(){
-        setInterval(()=>{
-            this.score+=10
-        },1000/60) */
-/*     } */
-/* scoreIncrease(){
-    setInterval(()=> {
-        this.score += 1;
-    },2000)
-} */
 
     update (){
-        /* let score = document.getElementById("score");
-        let lives = document.getElementById("lives");
-
-        score.innerHTML = this.score //what does inner HTML do here? 
-        lives.innerHTML = this.lives
-
- */
-/*         let timer = 0;
- */
-/*         this.scoreIncrease()
- */
+        
         this.player.move();
+
 
         for (let i = 0; i<this.obstacles.length; i++){
             const obstacle = this.obstacles[i];
@@ -102,24 +82,20 @@ class Game {
 
         if (this.lives === 0){
             this.endGame();
-            return;
         }
 
         let score = document.getElementById("score");
         let lives = document.getElementById("lives");
 
+        
         score.innerHTML = Math.floor(this.score += 1/60);
         lives.innerHTML = this.lives;
-
-/*         let frequency = 2200;
- */
 
         if(!this.obstacles.length && !this.loadingObstacle){  
             this.loadingObstacle = true;
             setInterval(()=>{
                 this.obstacles.push(new Obstacle(this.gameScreen))
                 this.loadingObstacle = false
-                /* frequency -=200 */
             }, 1300)
 
         }
