@@ -29,6 +29,7 @@ class Player {
         //Update players car position based on direciton
         this.left += this.directionX;
         this.top += this.directionY;
+        console.log(this.top);
         // Right
         if (this.left + this.width >= this.gameScreen.offsetWidth){
             this.left = this.gameScreen.offsetWidth - this.width
@@ -51,10 +52,11 @@ class Player {
         }
         this.updatePosition()
     }
-
+    checkJump(){
+        return this.isJumping;
+    }
 
     jump(){
-        console.log(this.top);
         if (this.top >= 450 && !this.isJumping){
            this.isJumping = true;
         } 
@@ -80,10 +82,10 @@ class Player {
         } */
 
         if(this.top > 200 && this.isJumping && !this.isFalling){
-            this.top -= 20
+            this.directionY = -20;
         }
-        else if(this.top <= 200 && this.isJumping){
-            this.top += 20
+        else if(this.top < 200 && this.isJumping && !this.isFalling){
+            this.directionY = 20;
             this.isFalling = true;
         }
         

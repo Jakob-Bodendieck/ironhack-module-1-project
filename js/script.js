@@ -56,7 +56,11 @@ window.onload = function (){
                         break; */
 
                         case "ArrowUp":
-                            game.player.jump()
+                            if (game.player.checkJump()){
+                               break;
+                            }else {
+                                game.player.jump();
+                            }
                             break;
 
                         case "ArrowRight":

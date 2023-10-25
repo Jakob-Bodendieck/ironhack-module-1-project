@@ -102,6 +102,7 @@ class Game {
 
         if (this.lives === 0){
             this.endGame();
+            return;
         }
 
         let score = document.getElementById("score");
