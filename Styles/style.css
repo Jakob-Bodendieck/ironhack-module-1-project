@@ -110,25 +110,43 @@ body {
 
   #game-end {
     display: none;
+/*     background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover; */
+    height: auto;
+    color: #fff;
+
+  }
+
+  #game-end img{
+    /*     background-position: center;
+        background-size: cover; */
+        height: 400px;
+        width: auto;
+        border-radius: 5%;
+      }
+
+  #game-container button {
+    margin-top: 10px;
+    margin-bottom: 100px;
   }
 
   #game-end-job{
     display: none;
+/*     background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover; */
+    height: auto;
+    color: #fff;
 
   }
 
   #game-end-job img{
-    background-position: center;
-    background-size: cover;
-    height: 500px;
+/*     background-position: center;
+    background-size: cover; */
+    height: 400px;
     width: auto;
-  }
-
-  #game-end img{
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    width: auto;
+    border-radius: 5%;
   }
   
   .game-intro p {

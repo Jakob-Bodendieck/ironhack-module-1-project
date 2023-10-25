@@ -183,7 +183,7 @@ class Game {
 
         if (this.score < 100){
             this.gameScreen.style.display = "none"
-            this.gameEndScreen.style.display = "block"
+         this.gameEndScreen.style.display = "block"
             this.sadMusic.play()
         }
 
