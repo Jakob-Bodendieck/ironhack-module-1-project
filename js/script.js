@@ -24,13 +24,13 @@ window.onload = function (){
     })
 
     function restartGame(){
-        location.reload() //this could cause errors, not 100% sure what it means. 
+        location.reload() 
     }
 
     // Key Events
 
     function handleKeydown (event){
-        const key = event.key; // not 100% sure about this 
+        const key = event.key; 
 
         const possibleKeys = [
             "ArrowLeft",
