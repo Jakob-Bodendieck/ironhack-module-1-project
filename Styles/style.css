@@ -48,6 +48,10 @@ body {
     padding: 0 px 0px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-image: url(../images/wallpaper.jpeg);
+    background-size: cover;
+    animation: slide 10s linear infinite;
   }
   
   #game-screen {
@@ -55,17 +59,30 @@ body {
     align-content: center;
     padding: 20px 0px;
     overflow: hidden;
-    position: relative;
-    background-image: url(../images/vectorgif.gif);
-    background-size: cover;
-    animation: slide 10s linear infinite;
+
   }
 
-  #ground-image {
+/*   #ground-image {
     display: none;
   }
-
+ */
   #stats {
+    display: none;
+    flex-direction: row;
+    color: white;
+    margin-top: 10px;
+    margin-left: 85%;
+    margin-right: 15px;
+  }
+
+  #stats img{
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #stats h2 {
     display: none;
   }
 

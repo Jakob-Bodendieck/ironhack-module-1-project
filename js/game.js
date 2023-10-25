@@ -41,7 +41,7 @@ class Game {
 
         //Show the Game  Screen
         this.gameScreen.style.display = "block";
-        this.stats.style.display = "block";
+        this.stats.style.display = "flex";
 
         //Start Game
         this.gameLoop()
