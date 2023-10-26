@@ -7,7 +7,7 @@ body {
 
 #game-intro {
   padding: 5px 0px;
-  background-image: url(../images/wallpaper.jpeg);
+  background-image: url('./docs/images/wallpaper.jpeg');
   background-position: center;
   background-size: cover;
   height: 800px;
@@ -40,7 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url(../images/background.jpg);
+  background-image: url(./docs/images/background.jpg);
   background-position: center;
   background-size: cover;
   height: auto;

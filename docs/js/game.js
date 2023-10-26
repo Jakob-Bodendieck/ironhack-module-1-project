@@ -6,7 +6,7 @@ class Game {
         this.gameEndScreen = document.getElementById('game-end');
         this.gameEndScreenJob = document.getElementById('game-end-job');
         this.stats = document.getElementById('stats');
-        this.player = new Player (this.gameScreen, 200, 485, 100, 150, "./images/walking gif.gif");
+        this.player = new Player (this.gameScreen, 200, 485, 100, 150, "./docs/images/walking gif.gif");
         this.height = 600;
         this.width = 1450; 
         this.obstacles = [];

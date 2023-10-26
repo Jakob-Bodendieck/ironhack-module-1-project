@@ -11,7 +11,7 @@ class Coffee {
         this.height = 75;
 
         this.element = document.createElement("img");
-        this.element.src = "./images/coffee-removebg.png";
+        this.element.src = "./docs/images/coffee-removebg.png";
         this.element.style.position = "absolute";
         this.element.style.width = `${this.width}px`;
         this.element.style.height = `${this.height}px`;
