@@ -12,7 +12,7 @@ class Player {
         this.element = document.createElement("img");
         this.isJumping = false;
         this.isFalling = false;
-        this.jumpSound = new Audio ('../Sounds/jump.mp3');
+        this.jumpSound = new Audio ('./docs/Sounds/jump.mp3');
 
         this.element.src = imgSrc;
         this.element.style.position = "absolute";

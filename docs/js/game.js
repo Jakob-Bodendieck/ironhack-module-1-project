@@ -16,11 +16,11 @@ class Game {
         this.gameOver = false;
         this.loadingObstacle = false;
         this.loadingCoffee = false;
-        this.myMusic =  new Audio('../Sounds/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3');
-        this.winningMusic = new Audio ('../Sounds/winning music.mp3');
-        this.sadMusic = new Audio ('../Sounds/sad-music.mp3');
-        this.coffeeSound = new Audio ('../Sounds/coffeeSound.wav');
-        this.bugSound = new Audio ('../Sounds/bugSound.wav');
+        this.myMusic =  new Audio('./docs/Sounds/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3');
+        this.winningMusic = new Audio ('./docs/Sounds/winning music.mp3');
+        this.sadMusic = new Audio ('./docs/Sounds/sad-music.mp3');
+        this.coffeeSound = new Audio ('./docs/Sounds/coffeeSound.wav');
+        this.bugSound = new Audio ('./docs/bugSound.wav');
 
     }
 
