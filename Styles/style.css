@@ -2,181 +2,180 @@
 /* Did not double check any of this yet*/
 
 body {
-    padding: 0;
-    text-align: center;
-    font-family: fantasy;
-  }
-  
-  #game-intro {
-    padding: 5px 0px;
-    background-image: url(../images/wallpaper.jpeg);
-    background-position: center;
-    background-size: cover;
-    height: 800px;
-    width: 100%;
-  }
+  padding: 0;
+  text-align: center;
+  font-family: fantasy;
+}
 
-  #game-intro p {
-    color: white;
-    font-size: 1.7rem;  
-    text-shadow: 2px 2px 20px white;
+#game-intro {
+  padding: 5px 0px;
+  background-image: url(../images/wallpaper.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+
+#game-intro p {
+  color: white;
+  font-size: 1.7rem;  
+  text-shadow: 2px 2px 20px white;
 /*     width: 500px;
- */    text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
+*/    text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
-  #game-intro h1 {
-    color: white;
-    text-shadow: 2px 2px 10px white;
-    font-size: 2.2rem;
-    margin-bottom: 2%;
-    margin-top: 15%;
+#game-intro h1 {
+  color: white;
+  text-shadow: 2px 2px 10px white;
+  font-size: 2.2rem;
+  margin-bottom: 2%;
+  margin-top: 15%;
 
-  }
+}
 
 /*   #intro-image {
-    height: auto;
-    width: 100%;
-    resize: both;
-  } */
-  
-  #game-container {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 0 px 0px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-image: url(../images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    height: auto;
-  }
-  
-  #game-screen {
-    display: none;
-    align-content: center;
-    padding: 20px 0px;
-    overflow: hidden;
+  height: auto;
+  width: 100%;
+  resize: both;
+} */
 
-  }
+#game-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0 px 0px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 20px 0px;
+  overflow: hidden;
+
+}
 
 /*   #ground-image {
-    display: none;
-  }
- */
-  #stats {
-    display: none;
-    flex-direction: row;
-    color: white;
-    margin-top: 10px;
-    margin-left: 85%;
-    margin-right: 15px;
-  }
+  display: none;
+}
+*/
+#stats {
+  display: none;
+  flex-direction: row;
+  color: white;
+  margin-top: 10px;
+  margin-left: 85%;
+  margin-right: 15px;
+}
 
-  #stats img{
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
+#stats img{
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
-  #stats h2 {
-    display: none;
-  }
+/*Progress Bar*/
 
+#stats h2 {
+  display: none;
+}
 
-  
 /*   @keyframes slide {
-    0% {
-      background-position: 0 -1000px;
-    }
-    95% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 50px;
-    } */
+  0% {
+    background-position: 0 -1000px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  } */
 
 /* @keyframes slide {
-      0% {
-        transform: translate(0);
-      }
-      100% {
-        transform: translate(-1920px);
-       }}  */
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-1920px);
+     }}  */
 
-  #game-end {
-    display: none;
+#game-end {
+  display: none;
 /*     background-image: url(../images/background.jpg);
-    background-position: center;
-    background-size: cover; */
-    height: auto;
-    color: #fff;
+  background-position: center;
+  background-size: cover; */
+  height: auto;
+  color: #fff;
 
-  }
+}
 
-  #game-end img{
-    /*     background-position: center;
-        background-size: cover; */
-        height: 400px;
-        width: auto;
-        border-radius: 5%;
-      }
+#game-end img{
+  /*     background-position: center;
+      background-size: cover; */
+      height: 400px;
+      width: auto;
+      border-radius: 5%;
+    }
 
-  #game-container button {
-    margin-top: 10px;
-    margin-bottom: 100px;
-  }
+#game-container button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
 
-  #game-end-job{
-    display: none;
+#game-end-job{
+  display: none;
 /*     background-image: url(../images/background.jpg);
-    background-position: center;
-    background-size: cover; */
-    height: auto;
-    color: #fff;
+  background-position: center;
+  background-size: cover; */
+  height: auto;
+  color: #fff;
 
-  }
+}
 
-  #game-end-job img{
+#game-end-job img{
 /*     background-position: center;
-    background-size: cover; */
-    height: 400px;
-    width: auto;
-    border-radius: 5%;
-  }
-  
-  .game-intro p {
-    font-size: 18px;
-    font-family: "Verdana";
-  }
-  
-  .logo-img {
-    width: 350px;
-  }
-  
-  .arrows-img {
-    width: 150px;
-  }
-  
-  body button {
-    font-size: 30px;
-    background-color: #460a7f;
-    color: #fff;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px white;
-    font-family: fantasy;
-  }
+  background-size: cover; */
+  height: 400px;
+  width: auto;
+  border-radius: 5%;
+}
 
-  #start-button {
-    text-align: center;
-    margin-top: 75px;
-  }
-  
+.game-intro p {
+  font-size: 18px;
+  font-family: "Verdana";
+}
+
+.logo-img {
+  width: 350px;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+body button {
+  font-size: 30px;
+  background-color: #460a7f;
+  color: #fff;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px white;
+  font-family: fantasy;
+}
+
+#start-button {
+  text-align: center;
+  margin-top: 75px;
+}

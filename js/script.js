@@ -3,17 +3,15 @@ window.onload = function (){
     const restartButton = document.getElementById("restart-button");
     const restartButtonJob = document.getElementById ("restart-button-job-offer");
 
-
     let game;
 
     startButton.addEventListener("click", function(){
-        game = new Game(); //need to create this class
-        game.start(); //need to create this function
-        startGame(); //need to create this function
+        game = new Game();
+        game.start(); 
+        startGame(); 
     })
 
-    function startGame (){ //empty for now
-    }
+    function startGame (){}
 
     restartButton.addEventListener("click", function(){
         restartGame();
@@ -24,13 +22,13 @@ window.onload = function (){
     })
 
     function restartGame(){
-        location.reload() 
+        location.reload()
     }
 
     // Key Events
 
     function handleKeydown (event){
-        const key = event.key; 
+        const key = event.key;
 
         const possibleKeys = [
             "ArrowLeft",
@@ -40,43 +38,29 @@ window.onload = function (){
         ]
 
         if (possibleKeys.includes(key)){
-            event.preventDefault() //preventing actions from taking place that we dont want (default actions for specific inputs)
-
-            //Implement the jump here
+            event.preventDefault() 
             if (game){
-
-
                 switch(key){
                     case "ArrowLeft":
-                        game.player.directionX = -3; //still need to define player
+                        game.player.directionX = -3; 
                         break;
-/* 
-                        case "ArrowUp":
-                        game.player.directionY = -3; //change this later to make the player jump -> work this out with an interval
-                        break; */
-
                         case "ArrowUp":
                             if (game.player.checkJump()){
-                               break;
+                            break;
                             }else {
                                 game.player.jump();
                             }
-                            break;
-
+                        break;
                         case "ArrowRight":
                         game.player.directionX = 3;
                         break;
-                        
-/*                         case "ArrowDown": 
-                        game.player.directionY = 3; //change this later when we define the jumping function  */
-
                 }
             }
         }
     }
 
     function handleKeyUp (event) {
-        const key = event.key; // not 100% sure about this 
+        const key = event.key;
 
         const possibleKeys = [
             "ArrowLeft",
@@ -86,25 +70,21 @@ window.onload = function (){
         ]
 
         if (possibleKeys.includes(key)){
-            event.preventDefault() //preventing actions from taking place that we dont want (default actions for specific inputs)
+            event.preventDefault();
 
             if (game){
                 switch(key){
                     case "ArrowLeft":
-                        game.player.directionX = 0; //still need to define player
+                        game.player.directionX = 0; 
                         break;
 
                         case "ArrowUp":
-                        game.player.directionY = +5; //change this later to make the player jump
+                        game.player.directionY = +5; 
                         break; 
 
                         case "ArrowRight":
                         game.player.directionX = 0;
                         break;
-                        
-/*                      case "ArrowDown": 
-                        game.player.directionY = 0; //change this later when we define the jumping function  */
-
                 }
             }
         }

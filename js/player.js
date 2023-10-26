@@ -12,6 +12,7 @@ class Player {
         this.element = document.createElement("img");
         this.isJumping = false;
         this.isFalling = false;
+        this.jumpSound = new Audio ('../Sounds/jump.mp3')
 
         this.element.src = imgSrc;
         this.element.style.position = "absolute";
@@ -59,6 +60,7 @@ class Player {
     jump(){
         if (this.top >= 450 && !this.isJumping){
            this.isJumping = true;
+           this.jumpSound.play()
         } 
     }
 
