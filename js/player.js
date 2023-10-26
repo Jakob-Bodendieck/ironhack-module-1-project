@@ -12,7 +12,7 @@ class Player {
         this.element = document.createElement("img");
         this.isJumping = false;
         this.isFalling = false;
-        this.jumpSound = new Audio ('../Sounds/jump.mp3')
+        this.jumpSound = new Audio ('../Sounds/jump.mp3');
 
         this.element.src = imgSrc;
         this.element.style.position = "absolute";
@@ -27,13 +27,13 @@ class Player {
     }
 
     move(){
-        //Update players car position based on direciton
+        //Update players position based on direciton
         this.left += this.directionX;
         this.top += this.directionY;
         console.log(this.top);
         // Right
         if (this.left + this.width >= this.gameScreen.offsetWidth){
-            this.left = this.gameScreen.offsetWidth - this.width
+            this.left = this.gameScreen.offsetWidth - this.width;
         }
         // Left
         else if (this.left <= 0) {
@@ -51,7 +51,7 @@ class Player {
         else if (this.top <= 0){
             this.top = 0;
         }
-        this.updatePosition()
+        this.updatePosition();
     }
     checkJump(){
         return this.isJumping;
@@ -60,28 +60,13 @@ class Player {
     jump(){
         if (this.top >= 450 && !this.isJumping){
            this.isJumping = true;
-           this.jumpSound.play()
+           this.jumpSound.play();
         } 
     }
 
     updatePosition() {
-        //Update CSS
-/*         if(this.directionY < this.maxJumpHeight){
-            this.maxJumpHeight = this.directionY;
-        } */
         this.element.style.left = `${this.left}px`;
         this.element.style.top = `${this.top}px`;
-
-/*         if(!this.isGrounded){
-            this.top += 5;
-        }
-        else if(this.top <= 50){
-            this.top += 5;
-        }
-        else if(this.top >= 100){
-            this.top = 100;
-            this.isGrounded = true;
-        } */
 
         if(this.top > 200 && this.isJumping && !this.isFalling){
             this.directionY = -10;
@@ -90,12 +75,11 @@ class Player {
             this.directionY = 10;
             this.isFalling = true;
         }
-        
     }
 
     didCollide(obstacle){
-        const playerRect = this.element.getBoundingClientRect()
-        const obstacleRect = obstacle.element.getBoundingClientRect()
+        const playerRect = this.element.getBoundingClientRect();
+        const obstacleRect = obstacle.element.getBoundingClientRect();
 
         if (playerRect.left < obstacleRect.right
             && playerRect.right > obstacleRect.left
@@ -108,8 +92,8 @@ class Player {
     }
 
     didCollide(coffee){
-        const playerRect = this.element.getBoundingClientRect()
-        const coffeeRect = coffee.element.getBoundingClientRect()
+        const playerRect = this.element.getBoundingClientRect();
+        const coffeeRect = coffee.element.getBoundingClientRect();
 
         if (playerRect.left < coffeeRect.right
             && playerRect.right > coffeeRect.left

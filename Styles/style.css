@@ -1,6 +1,4 @@
 
-/* Did not double check any of this yet*/
-
 body {
   padding: 0;
   text-align: center;
@@ -20,8 +18,7 @@ body {
   color: white;
   font-size: 1.7rem;  
   text-shadow: 2px 2px 20px white;
-/*     width: 500px;
-*/    text-align: center;
+  text-align: center;
   margin-left: 25%;
   margin-right: 25%;
 }
@@ -34,12 +31,6 @@ body {
   margin-top: 15%;
 
 }
-
-/*   #intro-image {
-  height: auto;
-  width: 100%;
-  resize: both;
-} */
 
 #game-container {
   display: flex;
@@ -60,13 +51,8 @@ body {
   align-content: center;
   padding: 20px 0px;
   overflow: hidden;
-
 }
 
-/*   #ground-image {
-  display: none;
-}
-*/
 #stats {
   display: none;
   flex-direction: row;
@@ -83,48 +69,21 @@ body {
   margin-left: 10px;
 }
 
-/*Progress Bar*/
-
 #stats h2 {
   display: none;
 }
 
-/*   @keyframes slide {
-  0% {
-    background-position: 0 -1000px;
-  }
-  95% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 50px;
-  } */
-
-/* @keyframes slide {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(-1920px);
-     }}  */
-
 #game-end {
   display: none;
-/*     background-image: url(../images/background.jpg);
-  background-position: center;
-  background-size: cover; */
   height: auto;
   color: #fff;
-
 }
 
 #game-end img{
-  /*     background-position: center;
-      background-size: cover; */
-      height: 400px;
-      width: auto;
-      border-radius: 5%;
-    }
+  height: 400px;
+  width: auto;
+  border-radius: 5%;
+}
 
 #game-container button {
   margin-top: 10px;
@@ -133,17 +92,12 @@ body {
 
 #game-end-job{
   display: none;
-/*     background-image: url(../images/background.jpg);
-  background-position: center;
-  background-size: cover; */
   height: auto;
   color: #fff;
 
 }
 
 #game-end-job img{
-/*     background-position: center;
-  background-size: cover; */
   height: 400px;
   width: auto;
   border-radius: 5%;
