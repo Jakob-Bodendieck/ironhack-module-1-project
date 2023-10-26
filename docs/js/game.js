@@ -20,7 +20,7 @@ class Game {
         this.winningMusic = new Audio ('./docs/Sounds/winning music.mp3');
         this.sadMusic = new Audio ('./docs/Sounds/sad-music.mp3');
         this.coffeeSound = new Audio ('./docs/Sounds/coffeeSound.wav');
-        this.bugSound = new Audio ('./docs/bugSound.wav');
+        this.bugSound = new Audio ('./docs/Sounds/bugSound.wav');
 
     }
 
